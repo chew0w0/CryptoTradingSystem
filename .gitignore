@@ -1,0 +1,14 @@
+# Ignore Maven output folders
+target/
+
+# Ignore IDE settings
+.idea/
+*.iml
+
+# Ignore logs
+*.log
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+ 
