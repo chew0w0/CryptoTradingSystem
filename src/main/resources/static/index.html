@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crypto Trading System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Crypto Trading System</h1>
+    <p id="user"></p>
+
+	<h2>Wallet Balance</h2>
+	<div style="font-size: 18px; font-weight: bold; margin-bottom: 20px; color: #336699;">
+		<p id="wallet"></p>
+	</div>
+	<div>
+		<h3 style="font-size: 16px; margin-bottom: 10px;">Breakdown:</h3>
+		<p id="walletUsdt" style="font-size: 16px; margin: 5px 0;">
+	    	<strong style="color: #333;">USDT:</strong> 
+	 	</p>
+	 	<p id="walletBtc" style="font-size: 16px; margin: 5px 0;">
+	    	<strong style="color: #333;">BTC:</strong> 
+	 	</p>
+	 	<p id="walletEth" style="font-size: 16px; margin: 5px 0;">
+	 		<strong style="color: #333;">ETH:</strong> 
+	 	</p>
+	</div>
+    
+    <h2>Latest Prices</h2>
+    <p id="btcPrice"></p>
+    <p id="ethPrice"></p>
+    
+    <h2>Make a Trade</h2>
+    <form id="tradeForm">
+        <label for="pair">Pair:</label>
+        <select id="pair" name="pair">
+            <option value="BTC/USDT">BTC/USDT</option>
+            <option value="ETH/USDT">ETH/USDT</option>
+        </select><br><br>
+
+        <label for="type">Type:</label>
+        <select id="type" name="type">
+            <option value="BUY">BUY</option>
+            <option value="SELL">SELL</option>
+        </select><br><br>
+
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" required><br><br>
+
+        <button type="button" onclick="submitTrade()">Submit</button>
+    </form>
+    
+	<h2>Trading History</h2>
+	<table style="width: 100%; border-collapse: collapse; text-align: left; margin-top: 10px;">
+	    <thead>
+	        <tr style="background-color: #f4f4f4; border-bottom: 2px solid #ddd;">
+	            <th style="padding: 10px; border: 1px solid #ddd;">Date</th>
+	            <th style="padding: 10px; border: 1px solid #ddd;">Pair</th>
+	            <th style="padding: 10px; border: 1px solid #ddd;">Type</th>
+	            <th style="padding: 10px; border: 1px solid #ddd;">Amount</th>
+	            <th style="padding: 10px; border: 1px solid #ddd;">Price</th>
+	        </tr>
+	    </thead>
+	    <tbody id="history">
+	        <tr>
+	            <td colspan="5" style="padding: 20px; text-align: center;">No trading history available.</td>
+	        </tr>
+	    </tbody>
+	</table>
+
+    <script src="script.js"></script>
+</body>
+</html>
